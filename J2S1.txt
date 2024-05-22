@@ -1,0 +1,22 @@
+stringbuffer J2
+
+import java.util.Scanner;
+public class stringBuffer
+{
+public static void main(String args[])
+{
+Scanner scanner = new Scanner(System.in);
+StringBuffer stringbuffer = new StringBuffer();
+System.out.println("Capacity of String Buffer object:\t"+stringbuffer.capacity());
+System.out.println("Enter an string to reverse and convert it to upper case\n");
+String input = scanner.nextLine();
+StringBuffer reverseStr = new StringBuffer(input);
+reverseStr.reverse();
+String upper = reverseStr.toString().toUpperCase();
+System.out.println("Reversed String in Upper case:\t"+upper);
+System.out.println("Enter String to append to the resultant string:\n");
+String appnd = scanner.nextLine();
+upper = upper.concat(appnd);
+System.out.println("String after appending new String:\t"+upper);
+}
+}
